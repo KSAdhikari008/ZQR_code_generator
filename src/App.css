@@ -76,7 +76,7 @@ input {
   outline: none;
 }
 
-input:focus-visible {
+input:focus{
   border-color: #e05d43;
   box-shadow: 0 0 0 3px rgba(224, 93, 67, 0.15);
 }
