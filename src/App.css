@@ -1,0 +1,186 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+  color: #182126;
+  background: #e9e4db;
+  font-synthesis: none;
+}
+
+body {
+  margin: 0;
+}
+
+.app {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 32px 20px;
+  background-color: rgba(231, 231, 231, 0.35);
+}
+
+.container {
+  position: relative;;
+  max-width: 450px;
+  padding: 28px;
+  background: #fffdf8;
+  border: 1px solid rgba(24, 33, 38, 0.12);
+  box-shadow: 12px 14px 0 rgba(24, 33, 38, 0.08);
+}
+
+.container > span{
+  color: rgb(118, 145, 172);
+  position: absolute;
+  right: 10px;
+  top: 8px;
+  font-size: 0.8rem;
+}
+
+h1 {
+  max-width: 360px;
+  margin: 0 0 10px;
+  font-family: Georgia, serif;
+  font-size: clamp(30px, 7vw, 38px);
+  font-weight: 400;
+  letter-spacing: -0.04em;
+  line-height: 0.98;
+}
+
+.subtitle {
+  max-width: 340px;
+  margin: 0 0 20px;
+  color: #6e756f;
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+.input-section {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+input {
+  flex: 1;
+  /* min-width: 0; */
+  padding: 12px ;
+  border: 2px solid #c8c6bd;
+  border-radius: 2px;
+  background: #f7f5ef;
+  color: #182126;
+  font: inherit;
+  font-size: 15px;
+  outline: none;
+}
+
+input:focus-visible {
+  border-color: #e05d43;
+  box-shadow: 0 0 0 3px rgba(224, 93, 67, 0.15);
+}
+
+.clear-btn {
+  padding: 0 15px;
+  border: 1px solid #c8c6bd;
+  border-radius: 2px;
+  background: transparent;
+  color: #6e756f;
+  cursor: pointer;
+  font: inherit;
+  font-size: 13px;
+}
+
+.clear-btn:hover {
+  border-color: #182126;
+  color: black;
+}
+
+.qr-section {
+  height: 292px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  border: 2px solid #d8d4ca;
+  background: #f7f4ee;
+}
+
+.qr-section.is-active {
+  border-color: #182126;
+}
+
+.placeholder {
+  width: 228px;
+  height: 228px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  border: 2px dashed #bdb9ae;
+}
+
+.placeholder-mark {
+  color: #e05d43;
+  font-size: 28px;
+}
+
+.placeholder p {
+  margin: 0;
+  color: #8d928c;
+  font-size: 13px;
+}
+
+.download-btn {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  border-radius: 2px;
+  background: #182126;
+  color: #fffdf8;
+  font: inherit;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 160ms ease, transform 160ms ease;
+}
+
+.download-btn:hover:not(:disabled) ,.download-btn:focus:not(:disabled) {
+  background: #e05d43;
+  transform: translateY(-2px);
+}
+
+.download-btn:disabled {
+  background: #d1cec5;
+  color: #8d928c;
+  cursor: not-allowed;
+}
+
+.download-btn span {
+  margin-left: 5px;
+  font-size: 20px;
+  line-height: 0;
+}
+
+.footer-note {
+  margin: 18px 0 0;
+  color: #8d928c;
+  font-size: 11px;
+  text-align: center;
+}
+
+@media (max-width: 500px) {
+  .container {
+    padding: 24px;
+    box-shadow: 7px 8px 0 rgba(24, 33, 38, 0.08);
+  }
+
+  .input-section {
+    flex-direction: column;
+  }
+
+  .clear-btn {
+    padding: 12px;
+  }
+}
